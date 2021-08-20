@@ -3,20 +3,33 @@ package com.bridgelabz.generics;
 public class Maximumof3 {
 
 	public static void main(String[] args) {
-		Integer[] intarray = {15,10,12};
-		int integernum = MaximumInt(intarray);
-		System.out.println("Max Integer: "+integernum);
+		Integer[] array1 = {15,10,12};
+		MaximumTest(array1);
 		
-		Float[] floatarray = {15.1f,10.5f,15.6f};
-		Float floatnum = MaximumFloat(floatarray);
-		System.out.println("Max Float: "+floatnum);
 		
-		String[] stringarray = {"Apple", "Peach", "Banana"};
-		String stringnum = MaximumString(stringarray);
-		System.out.println("Max Float: "+stringnum);
+		Float[] array2 = {15.1f,10.5f,15.6f};
+		MaximumTest(array2);
+		
+		
+		String[] array3 = {"Apple", "Peach", "Banana"};
+		MaximumTest(array3);
+		
 	}
 
-	public static int MaximumInt(Integer[] intarray) {
+	public static <T extends Comparable<T>> void MaximumTest(T[] array) {
+		T max = array[0];
+		if(array[1].compareTo(max)>0) {
+			max = array[1];
+		}
+		if (array[2].compareTo(max)>0) {
+			max = array[2];
+		}
+		System.out.println(max);
+	}
+	
+	
+	
+/**	public static int MaximumInt(Integer[] intarray) {
 		int maxnum = intarray[0];
 		if(intarray[1].compareTo(maxnum)>0) {
 			maxnum = intarray[1];
@@ -47,6 +60,6 @@ public class Maximumof3 {
 			maxstring = stringarray[2];
 		}
 		return maxstring;
-	}
+	}**/
 }
 
