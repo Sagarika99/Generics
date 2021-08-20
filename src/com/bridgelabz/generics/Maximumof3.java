@@ -10,6 +10,10 @@ public class Maximumof3 {
 		Float[] floatarray = {15.1f,10.5f,15.6f};
 		Float floatnum = MaximumFloat(floatarray);
 		System.out.println("Max Float: "+floatnum);
+		
+		String[] stringarray = {"Apple", "Peach", "Banana"};
+		String stringnum = MaximumString(stringarray);
+		System.out.println("Max Float: "+stringnum);
 	}
 
 	public static int MaximumInt(Integer[] intarray) {
@@ -32,6 +36,17 @@ public class Maximumof3 {
 			maxnum = floatarray[2];
 		}
 		return maxnum;
+	}
+	
+	public static String MaximumString(String[] stringarray) {
+		String maxstring = stringarray[0];
+		if(stringarray[1].compareTo(maxstring)>0) {
+			maxstring = stringarray[1];
+		}
+		if (stringarray[2].compareTo(maxstring)>0) {
+			maxstring = stringarray[2];
+		}
+		return maxstring;
 	}
 }
 
