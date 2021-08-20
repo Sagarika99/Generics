@@ -31,11 +31,14 @@ public class Maximumof3 <T extends Comparable<T>> {
 		if (s.compareTo(max)>0) {
 			max = s;
 		}
-		
-		System.out.println(max);
+		printMax(x, y, z, p, s, max);
+		//System.out.println(max);
 	}
 	
 
+	public static <T> void printMax(T x, T y, T z, T p, T s , T max){
+		System.out.printf("Max of %s, %s, %s, %s, %s is %s\n",x, y, z, p, s, max);
+	}
 	public static void main(String[] args) {
 		Integer x1=15, y1=10, z1=12, p1=45, s1=2;		
 
